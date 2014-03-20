@@ -125,6 +125,9 @@ setup.sh && cd $WORDPRESS_INSTALLATION_DIR && php wp-cron.php
 EOF
 chmod +x bin/cron.sh
 
+#create the group nobody
+sudo groupadd nobody
+
 # Startup
 cat >>bin/start.sh <<EOF
 #!/usr/bin/env bash
